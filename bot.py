@@ -11,7 +11,7 @@ API_HASH = "42eb9677330d23211ff7397d0a446333"
 BOT_TOKEN = "7667630212:AAHmz8E34pEQb6juyMmgyNpdNlElwbqvKrU"
 
 # ✅ Adminlar ro‘yxati (bir nechta ID qo‘shish)
-ADMIN_ID = 5732326881  # Qo‘shimcha adminlarni shu yerga yozing
+ADMIN_ID = 6302342210  # Qo‘shimcha adminlarni shu yerga yozing
 
 # ✅ Storage Channel
 STORAGE_CHANNEL = -1002478103029  
