@@ -1,30 +1,22 @@
-name: Run Telegram Bot Auction
+name: Run Telegram Bot
 
 on:
   push:
     branches:
-      - main  # Faqat `main` branch ga push qilinganda ishga tushadi
-  pull_request:
-    branches:
       - main
-
+  
 jobs:
-  deploy:
+  run-bot:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🔄 Repository klonlash
-        uses: actions/checkout@v4
+      - name: 🔄 Repositoriyni yuklab olish
+        uses: actions/checkout@v3
 
-      - name: 🐍 Python muhitini sozlash
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+      - name: 🛠 Python va kutubxonalarni o‘rnatish
+        run: |
+          sudo apt-get update
+          
+          pip install pyrogram tgcrypto
 
       - name: 🚀 Botni ishga tushirish
-        env:
-          API_ID: ${{ secrets.API_ID }}
-          API_HASH: ${{ secrets.API_HASH }}
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: |
-          python bot.py  # Asosiy bot faylingizni shu yerga qo‘ying
+        run: python bot.py
