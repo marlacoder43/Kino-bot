@@ -21,11 +21,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 📦 Kerakli kutubxonalarni o‘rnatish
-        run: |
-         
-          pip install -r requirements.txt
-
       - name: 🚀 Botni ishga tushirish
         env:
           API_ID: ${{ secrets.API_ID }}
