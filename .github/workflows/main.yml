@@ -19,4 +19,4 @@ jobs:
           pip install pyrogram tgcrypto
 
       - name: 🚀 Botni ishga tushirish
-        run: python bot.py
+        run: python b.py
